@@ -71,11 +71,11 @@ curl http://localhost:8080/api
 
 Le proxy doit alterner les réponses entre les deux instances du serveur API.
 
-## 👤 Auteur
+## ✒️ Auteur
 
 **Mathieu**
 
-* Profil GitHub : [Votre Nom d'utilisateur](https://www.google.com/search?q=https://github.com/votre_username)
+[Mathieu GODALIER](https://github.com/Mathieu7483) - Élève en programmation à la Holberton School
 
 ## ⚖️ Licence
 
