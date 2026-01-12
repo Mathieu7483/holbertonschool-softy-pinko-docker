@@ -1,22 +1,29 @@
-version: '3.8'
-
 services:
   # Service Front-end (Nginx)
   front-end:
-    image: softy-pinko-front-end:task4
+    image: softy-pinko-front-end:task5
     build:
       context: ./front-end
       dockerfile: Dockerfile
-    ports:
-      - "9000:9000"
     depends_on:
       - back-end
 
   # Service Back-end (Flask)
   back-end:
-    image: softy-pinko-back-end:task4
+    image: softy-pinko-back-end:task5
     build:
       context: ./back-end
       dockerfile: Dockerfile
+
+  proxy:
+    image: softy-pinko-proxy:task5
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
     ports:
-      - "5252:5252"
+      - "80:80"
+    depends_on:
+      - front-end
+      - back-end
+
+  
